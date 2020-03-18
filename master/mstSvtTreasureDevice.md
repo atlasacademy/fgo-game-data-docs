@@ -22,7 +22,7 @@ This file holds a pivot object linking servants and noble phantasms(treasure dev
 
 Breakdown:
 
-- `damage` : Damage distribution. `damage.length` = number of hits. Each hit is `(damage[i]/100) * np_damage`. Note: due to some data entry issues, there is a possibility of the sum of `damage` to not equal 100. In such cases, the total damage of the NP can be over 100% of the np_damage.
+- `damage` : Damage distribution. `damage.length` = number of hits. Each hit is `(damage[i]/sum(damage)) * np_damage`. Note: due to some data entry issues, there is a possibility of the sum of `damage` to not equal 100. In such cases, the total damage of the NP can be over 100% of the np_damage.
 - `strengthStatus` : Unknown
 - `svtId` : Servant id. See `mstSvt.json`
 - `num` : Unknown
