@@ -1,5 +1,5 @@
 ## File : `mstSkillLv.json`
-This file holds a pivot object linking servants and noble phantasms(treasure device).
+This file holds servants' skills level details.
 
 ```json
 {

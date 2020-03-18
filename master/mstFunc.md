@@ -1,5 +1,5 @@
 ## File : `mstFunc.json`
-This file holds buff objects.
+This file holds function objects.
 
 ```json
 {
