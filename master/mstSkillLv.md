@@ -16,8 +16,8 @@ This file holds servants' skills level details.
 
 Breakdown:
 
-- `funcId`: list of functions, `id` in `mstFunc`
-- `svals`: list of values passed to the function objects. Order of values is mapped to enum `DataVals.TYPE`
+- `funcId`: list of functions id: `mstFunc.id`.
+- `svals`: list of values passed to the function objects. DataVals will process this list differently depending on function's types. Check out the DataVals class for specifics.
 - `script`:
 - `skillId`: `id` in `mstSkill`
 - `lv`: level of the skill
