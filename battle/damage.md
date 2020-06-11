@@ -23,7 +23,7 @@ damage for this card =
 (17)    + (servantAtk * busterChainMod)
 ```
 
-Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/export/NiceBuffList.ActionList.json):
+Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/export/JP/NiceBuffList.ActionList.json):
 
 * cardMod = actor.commandAtk - target.commandDef
 * atkMod = actor.atk
@@ -38,11 +38,14 @@ Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/ex
 * selfDmgCutAdd = target.receiveDamage
 
 Other constants lookup:
-* [firstCardBonus, cardDamageValue](https://api.atlasacademy.io/export/NiceCard.json):
-  * firstCardBonus: NiceCard.card.order.addAtk
-  * cardDamageValue: NiceCard.card.order.adjustAtk
-* [classAtkBonus](https://api.atlasacademy.io/export/NiceClassAttackRate.json): NiceClassAttackRate.class
-* [triangleModifier](https://api.atlasacademy.io/export/NiceClassRelation.json): NiceClassRelation.actor.target
-* [attributeModifier](https://api.atlasacademy.io/export/NiceAttributeRelation.json): NiceAttributeRelation.actor.target
-* criticalModifier = 2
-* extraCardModifier = 3.5 if it's a color brave chain and 2 otherwise (only applies to extra card)
+
+* firstCardBonus, cardDamageValue:
+  * firstCardBonus: [NiceCard](https://api.atlasacademy.io/export/JP/NiceCard.json).card.order.addAtk
+  * cardDamageValue: [NiceCard](https://api.atlasacademy.io/export/JP/NiceCard.json).card.order.adjustAtk
+* classAtkBonus: [NiceClassAttackRate](https://api.atlasacademy.io/export/JP/NiceClassAttackRate.json).class
+* triangleModifier: [NiceClassRelation](https://api.atlasacademy.io/export/JP/NiceClassRelation.json).actor.target
+* attributeModifier: [NiceAttributeRelation](https://api.atlasacademy.io/export/JP/NiceAttributeRelation.json).actor.target
+* criticalModifier: [NiceConstant](https://api.atlasacademy.io/export/JP/NiceConstant.json).CRITICAL_ATTACK_RATE = 2
+* extraCardModifier:
+  * [NiceConstant](https://api.atlasacademy.io/export/JP/NiceConstant.json).EXTRA_ATTACK_RATE_GRAND = 3.5 if it's a color brave chain
+  * [NiceConstant](https://api.atlasacademy.io/export/JP/NiceConstant.json).EXTRA_ATTACK_RATE_SINGLE = 2 otherwise (only applies to extra card)
