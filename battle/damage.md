@@ -6,21 +6,23 @@
 damage for this card =
 (01)    servantAtk
 (02)    * npDamageMultiplier
-(03)    * {firstCardBonus + [cardDamageValue * (1 + cardMod)]}
+(03)    * {firstCardBonus + [cardDamageValue * max(1 + cardMod, 0)]}
 (04)    * classAtkBonus
 (05)    * triangleModifier
 (06)    * attributeModifier
 (07)    * randomModifier
 (08)    * 0.23
-(09)    * (1 + atkMod - defMod)
+(09)    * max(1 + atkMod - defMod, 0)
 (10)    * criticalModifier
 (11)    * extraCardModifier
-(12)    * (1 - specialDefMod)
-(13)    * [1 + powerMod + selfDamageMod + (critDamageMod * isCrit) + (npDamageMod * isNP)]
+(12)    * max(1 - specialDefMod, 0)
+(13)    * max([1 + powerMod + selfDamageMod + (critDamageMod * isCrit) + (npDamageMod * isNP)], 0.001)
 (14)    * [1 + ((superEffectiveModifier - 1) * isSuperEffective)]
 (15)    + dmgPlusAdd
 (16)    + selfDmgCutAdd
 (17)    + (servantAtk * busterChainMod)
+
+damage = Math.Floor(Math.Max(damage, 0))
 ```
 
 Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/export/JP/NiceBuffList.ActionList.json):
