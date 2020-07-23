@@ -8,7 +8,7 @@ NP% per hit =
 (17)    Round Down(
 (18)        Round Down(
 (19)            offensiveNPRate
-(20)            * (firstCardBonus + (cardNpValue * (1 + cardMod)))
+(20)            * (firstCardBonus + (cardNpValue * max(1 + cardMod, 0)))
 (21)            * enemyServerMod
 (22)            * (1 + npChargeRateMod)
 (23)            * criticalModifier

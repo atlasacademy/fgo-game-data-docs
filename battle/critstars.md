@@ -4,12 +4,14 @@
 
 ```
 dropChancePerHit =
-(30)    (baseStarRate
-(31)    + firstCardBonus + (cardStarValue * (1 + cardMod))
-(32)    + serverRate
-(33)    + starDropMod
-(34)    - enemyStarDropMod
-(35)    + criticalModifier)
+        (
+(30)      baseStarRate
+(31)      + firstCardBonus + (cardStarValue * max(1 + cardMod, 0))
+(32)      + serverRate
+(33)      + starDropMod
+(34)      - enemyStarDropMod
+(35)      + criticalModifier
+        )
 (36)    * overkillModifier
 (37)    + overkillAdd
 ```
