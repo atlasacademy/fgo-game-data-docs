@@ -29,7 +29,7 @@ Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/ex
 
 * cardMod = actor.commandAtk - target.commandDef
 * atkMod = actor.atk
-* defMod = target.def
+* defMod = target.defence or target.defencePierce if it's a defence piercing NP
 * specialDefMod = target.specialdefence
 * powerMod = actor.damage + actor.damageIndividuality + actor.damageIndividualityActiveonly + actor.damageEventPoint
 * selfDamageMod = target.selfdamage
