@@ -24,7 +24,7 @@ Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/ex
 
 Other constants lookup:
 
-* offensiveNPRate: [NiceServant](https://api.atlasacademy.io/docs#/nice/get_servant_nice__region__servant__item_id__get).npGain or NiceServant.noblePhantasms.npNpGain
+* offensiveNPRate: [NiceServant](https://api.atlasacademy.io/docs#/nice/get_servant_nice__region__servant__item_id__get).noblePhantasms.npGain
 * firstCardBonus, cardNpValue:
   * firstCardBonus: [NiceCard](https://api.atlasacademy.io/export/JP/NiceCard.json).card.order.addTdGauge
   * cardNpValue: [NiceCard](https://api.atlasacademy.io/export/JP/NiceCard.json).card.order.adjustTdGauge
