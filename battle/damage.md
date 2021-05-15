@@ -25,7 +25,7 @@ damage for this card =
 damage = Math.Floor(Math.Max(damage, 0))
 ```
 
-Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/export/JP/NiceBuffList.ActionList.json):
+Mapping of damage formula terms to [buff actions](buff.md):
 
 * cardMod = actor.commandAtk - target.commandDef
 * atkMod = actor.atk

@@ -17,7 +17,7 @@ NP% per hit =
         )
 ```
 
-Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/export/JP/NiceBuffList.ActionList.json):
+Mapping of damage formula terms to [buff actions](buff.md):
 
 * cardMod = atkSvt.commandNpAtk - target.commandNpDef
 * npChargeRateMod = atkSvt.dropNp

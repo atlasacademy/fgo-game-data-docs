@@ -16,7 +16,7 @@ dropChancePerHit =
 (37)    + overkillAdd
 ```
 
-Mapping of damage formula terms to [buff actions](https://api.atlasacademy.io/export/JP/NiceBuffList.ActionList.json):
+Mapping of damage formula terms to [buff actions](buff.md):
 
 * cardMod = atkSvt.commandStarAtk - defSvt.commandStarDef
 * starDropMod = atkSvt.criticalPoint
